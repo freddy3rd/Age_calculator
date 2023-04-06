@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+:root {
+  --clr-primary: hsl(259, 100%, 65%);
+  --clr-primary-200: hsl(0, 100%, 67%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(0, 0%, 94%);
+  --clr-neutral-300: hsl(0, 0%, 86%);
+  --clr-neutral-400: hsl(0, 1%, 44%);
+  --clr-neutral-500: hsl(0, 0%, 8%);
+
+  --clr-num-result: var(--clr-primary);
+  --clr-button: var(--clr-primary);
+
+  --clr-error: var(--clr-primary-200);
+  --fs-input: 2rem;
+
+  --step--2: clamp(0.69rem, calc(0.58rem + 0.6vw), 1rem);
+  --step--1: clamp(0.83rem, calc(0.67rem + 0.81vw), 1.25rem);
+  --step-0: clamp(1rem, calc(0.78rem + 1.1vw), 1.56rem);
+  --step-1: clamp(1.2rem, calc(0.91rem + 1.47vw), 1.95rem);
+  --step-2: clamp(1.44rem, calc(1.05rem + 1.95vw), 2.44rem);
+  --step-3: clamp(1.73rem, calc(1.21rem + 2.58vw), 4.05rem);
+  --step-4: clamp(2.07rem, calc(1.39rem + 3.4vw), 3.82rem);
+  --step-5: clamp(2.49rem, calc(1.6rem + 4.45vw), 4.77rem);
+
+  --ff-poppins: "Poppins", sans-serif;
+  --ff-poppins-italic: "Poppins", Italic;
+}
+
+*::after,
+*::before,
+* {
+  box-sizing: border-box;
+}
+span {
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background: var(--clr-neutral-300);
+}
+
+section {
+  /* padding-inline: 1rem; */
+  position: relative;
+  margin-inline: auto;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  /* width: 100%; */
+  width: min(100% - 15px, 800px);
+}
+main {
+  background: var(--clr-neutral-100);
+  width: min(100% - 20px, 600px);
+  border-radius: 20px;
+  border-bottom-right-radius: 150px;
+  /* padding-inline: 2rem; */
+  padding: 2rem;
+}
+.text-primary {
+  color: var(--clr-primary);
+}
+.text-neutral-500 {
+  font-weight: 700;
+  color: var(--clr-neutral-500);
+}
+.container {
+  width: 100%;
+  margin: 1.5rem auto;
+  font-family: var(--ff-poppins);
+}
+
+.container:nth-child(1) {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /* justify-content: center; */
+  gap: 15px;
+}
+.container:nth-child(1) label {
+  font-size: var(--step--2);
+  color: var(--clr-neutral-400);
+  text-transform: uppercase;
+}
+.container:nth-child(1) > div {
+  display: grid;
+  flex-grow: 1;
+  max-width: 130px;
+  /* flex-basis: 10px; */
+  row-gap: 5px;
+}
+.container:nth-child(1) > div:last-child {
+  position: relative;
+  flex-basis: 200px;
+}
+.container:nth-child(1) > div:last-child button {
+  position: absolute;
+}
+input {
+  /* flex-grow: 1; */
+  width: 100%;
+  padding: 10px 20px;
+  font-size: var(--step-1);
+  font-weight: bold;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid var(--clr-neutral-200);
+}
+
+.container:nth-child(2) {
+  border-top: 2px solid var(--clr-neutral-200);
+}
+.container:nth-child(2) h3 {
+  line-height: 1;
+  font-style: italic;
+  padding: 0;
+  margin: 0;
+}
+.container:nth-child(2) > div {
+  font-family: var(--ff-poppins);
+  font-weight: bolder;
+  font-size: var(--step-3);
+  padding: 0;
+  margin: 0;
+}
